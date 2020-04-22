@@ -1,1 +1,1 @@
-# Sistema-Especialista-no-ExpertSinta-IA-2020-01
+# Sistema Especialista no ExpertSinta IA 2020/01
