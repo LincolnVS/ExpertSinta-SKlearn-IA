@@ -1,0 +1,396 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    Sistema Especialista para Escolha de Algoritmo do scikit-learn V.1
+  -- Autores: Lincoln Vinicius Schreiber
+  -- Resumo:
+     O seguinte sistema especialista tem como objetivo identificar qual melhor algoritmo para se usar com a biblioteca scikit-learn para a linguagem de programação Python. Essa biblioteca tem aproximadamente 20 algoritmos prontos para utilizar. 
+     
+     Cada algoritmo um tem requisitos e funções especificas (regressão, classificação, redução de dimensão) e a ideia é a pessoa responder rapidamente algumas questões sobre o conjunto de dados, e obter uma resposta do melhor algoritmo para utilizar dessa biblioteca. 
+     
+     Trabalho 1 da disciplina Inteligência Artificial e Sistemas Inteligentes ministrada pela professora doutora Patrícia Augustin Jaques e o professor douto Sandro José Rigo, no semestre 2020/1.
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: C:\Users\schreiber\OneDrive - Associacao Antonio Vieira\Mestrado\Aulas\2020-1 Inteligência Artificial e Sistemas Inteligentes\Trabalho 1 - Sistema Especialista\bc1.bcm
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  P1
+    Tipo:
+      univalorada
+  P10
+    Tipo:
+      univalorada
+  P11
+    Tipo:
+      univalorada
+  P12
+    Tipo:
+      univalorada
+  P13
+    Tipo:
+      univalorada
+  P14
+    Tipo:
+      univalorada
+  P15
+    Tipo:
+      univalorada
+  P16
+    Tipo:
+      univalorada
+  P17
+    Tipo:
+      univalorada
+  P18
+    Tipo:
+      univalorada
+  P19
+    Tipo:
+      univalorada
+  P2
+    Tipo:
+      univalorada
+  P20
+    Tipo:
+      multivalorada
+  P3
+    Tipo:
+      univalorada
+  P4
+    Tipo:
+      univalorada
+  P5
+    Tipo:
+      univalorada
+  P6
+    Tipo:
+      univalorada
+  P7
+    Tipo:
+      univalorada
+  P8
+    Tipo:
+      univalorada
+  P9
+    Tipo:
+      univalorada
+  Resposta
+    Valores:
+      VBGMM
+      Lasso
+      MiniBatch KMeans
+      EnsembleRegressors
+      Spectral Clustering
+      RidgeRegression
+      Naive Bayes
+      Randomized PCA
+      SVC
+      Spectral Embedding
+      Linear SVC
+      Infelizmente nenhum algoritmo do Scikit-Learn se encaixa nessas opções :(
+      SGD Classifier
+      Mean Shift
+      SGD Regressor 
+      GMM
+      ElasticNet
+      KMeans
+      SVR(kernel='rbf')
+      Ensemble Classifiers
+      SVR(kernel='linear')
+      KNeighbors Classifier
+      Isomap
+      Kernel Approximation
+      LLE
+      Consiga mais dados
+    Tipo:
+      multivalorada
+
+OBJETIVOS
+
+  Resposta
+
+REGRAS
+
+  Regra 1
+    SE P1 = Não
+    ENTÃO Resposta = Consiga mais dados CNF 100%
+
+  Regra 2
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Não
+    E  P5 = Não
+    ENTÃO Resposta = SGD Classifier CNF 100%
+
+  Regra 3
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Não
+    E  P5 = Sim
+    ENTÃO Resposta = Kernel Approximation CNF 100%
+
+  Regra 4
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Sim
+    E  P18 = Não
+    ENTÃO Resposta = Kernel Approximation CNF 100%
+
+  Regra 5
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Sim
+    E  P6 = Não
+    ENTÃO Resposta = Linear SVC CNF 100%
+
+  Regra 6
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Sim
+    E  P6 = Sim
+    E  P7 = Não
+    E  P8 = Não
+    ENTÃO Resposta = KNeighbors Classifier CNF 100%
+
+  Regra 7
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Sim
+    E  P6 = Sim
+    E  P7 = Não
+    E  P8 = Sim
+    ENTÃO Resposta = Ensemble Classifiers CNF 100%
+          Resposta = SVC CNF 100%
+
+  Regra 8
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Sim
+    E  P4 = Sim
+    E  P6 = Sim
+    E  P7 = Sim
+    ENTÃO Resposta = Naive Bayes CNF 100%
+
+  Regra 9
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Não
+    E  P9 = Sim
+    E  P10 = Sim
+    E  P11 = Não
+    ENTÃO Resposta = KMeans CNF 100%
+
+  Regra 10
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Não
+    E  P9 = Sim
+    E  P10 = Sim
+    E  P11 = Sim
+    ENTÃO Resposta = GMM CNF 100%
+          Resposta = Spectral Clustering CNF 100%
+
+  Regra 11
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Não
+    E  P9 = Sim
+    E  P10 = Não
+    ENTÃO Resposta = MiniBatch KMeans CNF 100%
+
+  Regra 12
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Não
+    E  P9 = Não
+    E  P10 = Sim
+    ENTÃO Resposta = Mean Shift CNF 100%
+          Resposta = VBGMM CNF 100%
+
+  Regra 13
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Não
+    ENTÃO Resposta = SGD Regressor  CNF 100%
+
+  Regra 14
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Sim
+    E  P13 = Sim
+    ENTÃO Resposta = Lasso CNF 100%
+          Resposta = ElasticNet CNF 100%
+
+  Regra 15
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Sim
+    E  P13 = Não
+    E  P14 = Não
+    E  P15 = Sim
+    ENTÃO Resposta = SVR(kernel='rbf') CNF 100%
+
+  Regra 16
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Sim
+    E  P13 = Não
+    E  P14 = Sim
+    E  P15 = Não
+    ENTÃO Resposta = RidgeRegression CNF 100%
+
+  Regra 17
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Sim
+    E  P13 = Não
+    E  P14 = Não
+    E  P15 = Não
+    ENTÃO Resposta = SVR(kernel='rbf') CNF 100%
+          Resposta = RidgeRegression CNF 100%
+
+  Regra 18
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Sim
+    E  P4 = Sim
+    E  P13 = Não
+    E  P14 = Sim
+    E  P15 = Sim
+    ENTÃO Resposta = SVR(kernel='linear') CNF 100%
+          Resposta = EnsembleRegressors CNF 100%
+
+  Regra 19
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Não
+    ENTÃO Resposta = Randomized PCA CNF 100%
+
+  Regra 20
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Sim
+    E  P18 = Sim
+    E  P19 = Não
+    E  P20 = Sim
+    ENTÃO Resposta = Isomap CNF 100%
+
+  Regra 21
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Sim
+    E  P18 = Sim
+    E  P19 = Sim
+    E  P20 = Não
+    ENTÃO Resposta = Spectral Embedding CNF 100%
+
+  Regra 22
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Sim
+    E  P18 = Sim
+    E  P19 = Não
+    E  P20 = Não
+    ENTÃO Resposta = Isomap CNF 100%
+          Resposta = Spectral Embedding CNF 100%
+
+  Regra 23
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Sim
+    E  P17 = Sim
+    E  P18 = Sim
+    E  P19 = Sim
+    E  P20 = Sim
+    ENTÃO Resposta = LLE CNF 100%
+
+  Regra 24
+    SE P1 = Sim
+    E  P2 = Não
+    E  P12 = Não
+    E  P16 = Não
+    ENTÃO Resposta = Infelizmente nenhum algoritmo do Scikit-Learn se encaixa nessas opções :( CNF 100%
+
+  Regra 25
+    SE P1 = Sim
+    E  P2 = Sim
+    E  P3 = Não
+    E  P9 = Não
+    E  P10 = Não
+    ENTÃO Resposta = Infelizmente nenhum algoritmo do Scikit-Learn se encaixa nessas opções :( CNF 100%
+
+PERGUNTAS
+
+  Variável:P1
+     Pergunta:"Número de amostras (Dataset) maior que 50? "
+  Variável:P10
+     Pergunta:"Tem menos de 10K de amostras no dataset?"
+  Variável:P11
+     Pergunta:"Já tentou "KMeans"?"
+  Variável:P12
+     Pergunta:"Está tentando predizer valores?"
+  Variável:P13
+     Pergunta:"O algoritmo precisa usar poucas features (poucos tipos de entrada)?"
+  Variável:P14
+     Pergunta:"Já tentou "SVR(kernel='linear')"?"
+  Variável:P15
+     Pergunta:"Já tentou "RidgeRegression"?"
+  Variável:P16
+     Pergunta:"Está tentando reduzir a dimensionalidade?"
+  Variável:P17
+     Pergunta:"Já testou "Randomized PCA"?"
+  Variável:P18
+     Pergunta:"Menos de 10K de amostras no dataset?"
+  Variável:P19
+     Pergunta:"Já tentou "Isomap"?"
+  Variável:P2
+     Pergunta:"Está tentando predizer uma categoria (cluster ou classificação)?"
+  Variável:P20
+     Pergunta:"Já tentou "Spectral Embedding"?"
+  Variável:P3
+     Pergunta:"Você tem dados rotulados (com saída definida)?"
+  Variável:P4
+     Pergunta:"Você tem menos de 100K de amostras no dataset?"
+  Variável:P5
+     Pergunta:"Já tentou "SGD Classifier"?"
+  Variável:P6
+     Pergunta:"Já tentou "Linear SVC"?"
+  Variável:P7
+     Pergunta:"Seus dados(dataset) é textual (dados com texto)?"
+  Variável:P8
+     Pergunta:"Já tentou "KNeighbors Classifier"?"
+  Variável:P9
+     Pergunta:"Sabe o número de categorias resultante?"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------
